@@ -5,7 +5,8 @@ from airflow.operators.bash import BashOperator
 default_args = {
     'owner': 'airflow',
     'start_date': datetime(2023, 8, 10),
-    'schedule': None
+    'schedule': None,
+    'catchup': False
 }
 
 with DAG('example_annaelle', default_args=default_args,) as dag:
